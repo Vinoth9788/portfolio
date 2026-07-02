@@ -28,7 +28,7 @@ import {
   FaTimes,
 } from 'react-icons/fa'
 import {
-  SiAngular,
+
   SiCss,
   SiDotnet,
   SiGit,
@@ -163,16 +163,7 @@ const certificates = [
   { title: 'Modern Backend Patterns', subtitle: 'ASP.NET & APIs' },
 ]
 
-const testimonials = [
-  {
-    quote: 'Vinoth blends deep technical execution with striking product thinking.',
-    name: 'Product Lead',
-  },
-  {
-    quote: 'Every interface he ships feels premium, deliberate, and fast.',
-    name: 'Engineering Manager',
-  },
-]
+
 
 const achievements = [
   { value: '4+', label: 'Years Experience' },
