@@ -867,22 +867,22 @@ function HomePage() {
   )
 }
 
-function NotFound() {
-  return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-slate-950 px-6 text-center text-white">
-      <h1 className="text-5xl font-semibold">404</h1>
-      <p className="mt-4 max-w-xl text-slate-300">The page you’re looking for could not be found, but the portfolio is still here.</p>
-      <Link to="/" className="mt-8 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-6 py-3 font-semibold text-cyan-200">Back home</Link>
-    </div>
-  )
-}
+// function NotFound() {
+//   return (
+//     <div className="flex min-h-screen flex-col items-center justify-center bg-slate-950 px-6 text-center text-white">
+//       <h1 className="text-5xl font-semibold">404</h1>
+//       <p className="mt-4 max-w-xl text-slate-300">The page you’re looking for could not be found, but the portfolio is still here.</p>
+//       <Link to="/" className="mt-8 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-6 py-3 font-semibold text-cyan-200">Back home</Link>
+//     </div>
+//   )
+// }
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="*" element={<NotFound />} />
+        {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
     </BrowserRouter>
   )
