@@ -410,7 +410,7 @@ function HomePage() {
           </nav>
           <div className="flex items-center gap-3">
             <button type="button" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="rounded-full border border-white/15 bg-white/10 p-3 text-slate-100 transition hover:border-cyan-400/60 hover:text-cyan-300">
-              {theme === 'dark' ? <FaMoon /> : <FaSun />}
+              {theme === 'dark' ? <FaSun /> : <FaMoon />}
             </button>
             <button type="button" onClick={() => setMobileMenuOpen(true)} className="rounded-full border border-white/15 bg-white/10 p-3 text-slate-100 md:hidden">
               <FaBars />
@@ -852,9 +852,14 @@ function HomePage() {
                 <button type="button" onClick={() => setCommandOpen(false)} className="rounded-full border border-white/10 bg-white/10 p-2 text-white"><FaTimes /></button>
               </div>
               <div className="mt-6 space-y-3">
-                {['Projects', 'Contact', 'Resume', 'Github'].map((item) => (
-                  <button key={item} type="button" className="flex w-full items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-left text-slate-200">
-                    <span>{item}</span>
+                {[
+                  { label: 'Projects', action: () => { setCommandOpen(false); document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' }); } },
+                  { label: 'Contact', action: () => { setCommandOpen(false); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); } },
+                  { label: 'Resume', action: () => { setCommandOpen(false); window.open(`${import.meta.env.BASE_URL}Vinoth_R_Resume.pdf`, '_blank'); } },
+                  { label: 'Github', action: () => { setCommandOpen(false); window.open('https://github.com/vinoth9788', '_blank'); } },
+                ].map((item) => (
+                  <button key={item.label} type="button" onClick={item.action} className="flex w-full items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-left text-slate-200 transition hover:bg-white/10 hover:text-cyan-300">
+                    <span>{item.label}</span>
                     <FaArrowRight />
                   </button>
                 ))}
