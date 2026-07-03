@@ -456,7 +456,7 @@ function HomePage() {
               <p className="mt-6 text-2xl font-medium text-slate-200 sm:text-3xl">Software Engineer</p>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">C# | ASP.NET | Angular | React | SQL Server</p>
               <div className="mt-8 flex flex-wrap gap-4">
-                <a href="/Vinoth_R_Resume.pdf" download className="rounded-full border border-cyan-400/40 bg-cyan-500/15 px-6 py-3 font-semibold text-cyan-200 transition hover:-translate-y-1 hover:bg-cyan-500/25">
+                <a href={`${import.meta.env.BASE_URL}Vinoth_R_Resume.pdf`} download className="rounded-full border border-cyan-400/40 bg-cyan-500/15 px-6 py-3 font-semibold text-cyan-200 transition hover:-translate-y-1 hover:bg-cyan-500/25">
                   <span className="mr-2 inline-flex"><FaDownload /></span>Download Resume
                 </a>
                 <a href="#projects" className="rounded-full border border-white/15 bg-white/10 px-6 py-3 font-semibold text-white transition hover:-translate-y-1 hover:border-fuchsia-400/50">
